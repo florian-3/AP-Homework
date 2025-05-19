@@ -1,4 +1,4 @@
-package Homework2;
+package Homework2.Excercise1;
 
 class Publication {
     protected String title;
