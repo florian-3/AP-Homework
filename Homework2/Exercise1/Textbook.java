@@ -1,4 +1,4 @@
-package Homework2.Excercise1;
+package Homework2.Exercise1;
 
 class Textbook extends Book {
     private String subject;

@@ -1,6 +1,5 @@
-package Homework2.Excercise2;
+package Homework2.Exercise3;
 
-import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
