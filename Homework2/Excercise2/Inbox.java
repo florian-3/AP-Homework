@@ -4,11 +4,15 @@ import java.util.ArrayList;
 
 public class Inbox {
 
-    ArrayList<Mail> inbox;
+    private ArrayList<Mail> inbox = new ArrayList<>();
+
+    public void addMail(Mail mail) {
+        inbox.add(mail);
+    }
 
     public void printEmailHeaders() {
         for (int i = 0; i < inbox.size(); i++) {
-            System.out.println(inbox.get(i).getHeader());
+            System.out.println(i + ": " + inbox.get(i).getHeader());
 
         }
     }

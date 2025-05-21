@@ -1,0 +1,6 @@
+Zu Aufgabe 1:
+
+Run() vs. Start()
+--> Start startet tatsächlich zwei oder mehrere parallele Threads/Region
+Run() erstellt hingegen keine parallele Region/Threads und lässt einfach die Methode normal Laufen
+Threads sinnvoll nutzen? -> start verwenden
