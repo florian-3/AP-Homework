@@ -9,7 +9,7 @@ public class Game extends JFrame {
     protected JLabel wordLabel, attemptsLabel, timeLabel;
     protected JTextField inputField;
     // The word the player has to guess (fixed for now)
-    protected String currentWord = "example ";
+    protected String currentWord = "example";
     // Stores the letters guessed by the player
     protected ArrayList<Character> guessedLetters = new ArrayList<>();
     // Number of tries left
@@ -48,6 +48,7 @@ public class Game extends JFrame {
             startButton.setEnabled(false);
         });
 // You will implement this method
+        inputField.addActionListener(e -> processInput());
         processInput();
         setVisible(true);
     }
@@ -82,6 +83,15 @@ public class Game extends JFrame {
     public void processInput() {
 // You will implement this
 
+        String guess = inputField.getText().toLowerCase();
+        inputField.setText("");
+        if(guess.length() != 1 || !Character.isLetter(guess.charAt(0))){
+            System.out.println("Please enter excatly one letter");
+            return;
+        }
+        handleGuess(guess.charAt(0));
+
+
 
     }
 
@@ -90,11 +100,13 @@ public class Game extends JFrame {
     protected void handleGuess(char guess) {
 // You will implement this
         if (guessedLetters.contains(guess)) {
-            System.out.println("Hint");
+            System.out.println("You already guessed this letter");
+            return;
 
-        } else {
-            guessedLetters.add(guess);
+
         }
+        guessedLetters.add(guess);
+
         if (currentWord.indexOf(guess) == -1){
             attemptsLeft--;
         }
@@ -133,5 +145,6 @@ public class Game extends JFrame {
 
         }
         inputField.setEnabled(false);
+        System.exit(0);
     }
 }
