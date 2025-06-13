@@ -1,9 +1,9 @@
-package hangman;
+/* package hangman;
 
 import javax.swing.*;
 import java.util.ArrayList;
 
-public abstract class HangmanGame extends GameGUI implements GameLogic, TimerLogic {
+public class HangmanGame extends GameGUI implements TimerLogic{
     protected Thread timerThread;
     protected boolean timerRunning;
 
@@ -18,7 +18,7 @@ public abstract class HangmanGame extends GameGUI implements GameLogic, TimerLog
         startTimer();
     }
 
-    @Override
+  /*  @Override
     public void processInput() {
         String text = inputField.getText().toLowerCase();
         inputField.setText("");
@@ -30,6 +30,8 @@ public abstract class HangmanGame extends GameGUI implements GameLogic, TimerLog
 
         handleGuess(text.charAt(0));
     }
+
+
 
     @Override
     public void handleGuess(char guess) {
@@ -80,7 +82,8 @@ public abstract class HangmanGame extends GameGUI implements GameLogic, TimerLog
     @Override
     public void startTimer() {
         timerRunning = true;
-        timerThread = new Thread(new TimerRunnable(this));
+        timerThread = new Thread(new TimerRunnable());
         timerThread.start();
     }
 }
+*/

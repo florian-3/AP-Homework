@@ -1,3 +1,5 @@
+package hangman;
+
 import javax.swing .*;
 import java.awt .*;
 import java.util. ArrayList ;
@@ -54,6 +56,14 @@ public abstract class GameGUI extends JFrame {
     }
     public void processInput () {
 // implement again
+
+        String guess = inputField.getText().toLowerCase();
+        inputField.setText("");
+        if(guess.length() != 1 || !Character.isLetter(guess.charAt(0))){
+            System.out.println("Please enter excatly one letter");
+            return;
+        }
+        handleGuess(guess.charAt(0));
     }
     protected abstract void handleGuess (char guess );
     protected abstract boolean hasWon ();
