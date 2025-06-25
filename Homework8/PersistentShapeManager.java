@@ -14,6 +14,9 @@ public class PersistentShapeManager {
         } catch (IOException e) {
             System.err.println("Error saving shapes: " + e.getMessage());
         }
+        catch (Exception e){
+            System.err.println("An unexpected error occurred: " + e.getMessage());
+        }
     }
 
     public static List<Shape> loadShapesFromFile(String filename) {
@@ -32,6 +35,9 @@ public class PersistentShapeManager {
             }
         } catch (IOException e) {
             System.err.println("Error reading shapes: " + e.getMessage());
+        }
+        catch (Exception e){
+            System.err.println("An unexpected error occurred: " + e.getMessage());
         }
 
         return shapes;
