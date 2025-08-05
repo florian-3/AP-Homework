@@ -7,7 +7,7 @@ public class CustomConfiguration extends Configuration{
     public CustomConfiguration(String appName, List<String> modules) {
         super(appName, modules);
     }
-    this.appName = "Neuer Name";
+    //this.appName = "Neuer Name";
 }
 
 
